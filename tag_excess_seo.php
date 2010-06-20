@@ -4,7 +4,7 @@
 Plugin Name: Tag Excess
 Plugin URI: http://www.syrus.it
 Description: Tag Excess
-Version: 1.0
+Version: 1.1
 Author: Daniele Di Rollo
 Author URI: http://www.syrus.it
 */
@@ -31,8 +31,9 @@ $conta2 = 0;
 $conta3 = 0;
 $conta4 = 0;
 echo '<div id="message" class="updated fade"><p>';
-	echo "Totale Articoli: ".wp_count_posts()->publish."<br>";
-	echo "Per evitare il TAG EXCESS il rapporto tra tag e posts deve essere al disotto del 20%: ".(wp_count_posts()->publish/100)*20;
+	echo "<h1>Totale Articoli: ".wp_count_posts()->publish."</h1><br>";
+	echo "Per evitare il TAG EXCESS il rapporto tra tag e posts deve essere al disotto del 20%: <b>".(wp_count_posts()->publish/100)*20;
+	echo "</b> è il numero di tag massimo da pubblicare per evitare il tag excess";
 	echo "<br>";
 	$posttags = get_tags();
 	if ($posttags) {
@@ -53,11 +54,12 @@ echo '<div id="message" class="updated fade"><p>';
 
 		}
 
-		echo "Tag presenti in almeno 1 articolo: ".$conta1."<br>";
-		echo "Tag presenti in più di 1 articolo: ".$conta2."<br>";
-		echo "Tag presenti in più di 2 articolo: ".$conta3."<br>";
-		echo "Tag presenti in più di 3 articoli: ".$conta4."<br>";
-		echo "<br>";
+		echo "<br><ul>";
+		echo "<li>Tag presenti in almeno 1 articolo: ".$conta1."</li>";
+		echo "<li>Tag presenti in più di 1 articolo: ".$conta2."</li>";
+		echo "<li>Tag presenti in più di 2 articolo: ".$conta3."</li>";
+		echo "<li>Tag presenti in più di 3 articoli: ".$conta4."</li>";
+		echo "</ul><br>";
 		echo "Stai usando i tag presenti in più di 2 articoli";
 
 	}
@@ -70,3 +72,4 @@ echo '</p></div>';
 add_filter('the_tags', 'tag_excess');
 
 add_action('admin_menu', 'pagina_tag');
+
