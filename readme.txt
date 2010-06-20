@@ -2,8 +2,8 @@
 Contributors: Daniele Di Rollo
 Donate link: http://www.syrus.it
 Tags: tag, seo, excess
-Requires at least: 1.0.1
-Tested up to: 1.0
+Requires at least: 2.9
+Tested up to: 2.9.2
 Stable tag: 1.0
 
 Mantiene la pubblicazione dei tag al disotto del 20% del numero di articoli in modo da non generare un tag excess
