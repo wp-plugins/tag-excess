@@ -3,7 +3,7 @@ Contributors: Daniele Di Rollo
 Donate link: http://www.syrus.it
 Tags: tag, seo, excess
 Requires at least: 2.9
-Tested up to: 2.9.2
+Tested up to: 3.0.0
 Stable tag: 1.1
 
 Mantiene la pubblicazione dei tag al disotto del 20% del numero di articoli in modo da non generare un tag excess
@@ -13,39 +13,21 @@ Mantiene la pubblicazione dei tag al disotto del 20% del numero di articoli in m
 Mantiene la pubblicazione dei tag al disotto del 20% del numero di articoli in modo da non generare un tag excess
 Il plugin conta quante volte il tag viene associato negli articoli in modo da non pubblicare i tag che vengono utilizzati 1 sola volta evitando così la duplicazione dipagine identiche.
 
-Esempio.
-Title: Articolo 1 
-Pagina: /articolo1.html
-Tag: key1, key2, key3, key4
+Esempio
 
-pagine tag: 
-	key1.html
-	key2.html
-	key3.html
-	key4.html
+Title: Articolo 1 Pagina: /articolo1.html Tag: key1, key2, key3, key4
+pagine tag: key1.html, key2.html, key3.html, key4.html
 
-Questi tag se riferiscono solo all'articolo 1, andranno a generare 4 pagine identiche 
-
-
+Questi tag si riferiscono solo all'articolo 1, andranno a generare 4 pagine identiche 
 Se invece i tag sono condivisi con altri articoli (per più di 2 volte) le pagine duplicate diminuiscono
 
-Title: Articolo 1 
-Pagina: /articolo1.html
-Tag: key1, key2, key3, key4
+Title: Articolo 1 Pagina: /articolo1.html Tag: key1, key2, key3, key4 
+Title: Articolo 2 Pagina: /articolo2.html Tag: key2, key3, key4 
+Title: Articolo 3 Pagina: /articolo3.html Tag: key1, key2, key3
 
-Title: Articolo 2 
-Pagina: /articolo2.html
-Tag: key2, key3, key4
+pagine tag: key2.html, key3.html
 
-Title: Articolo 3 
-Pagina: /articolo3.html
-Tag: key1, key2, key3
-
-pagine tag: 
-	key2.html
-	key3.html
-
- 
+Thank to <a href="http://www.sport10.it">Sport10</a>, <a href="http://www.automobili10.it">Automobili10</a>
 
 == Installation ==
 
